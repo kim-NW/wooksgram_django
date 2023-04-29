@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "wooksgram-django"
+version = "0.1.0"
+description = ""
+authors = ["knw <kimnamwook08@gmail.com>"]
+readme = "README.md"
+packages = [{include = "wooksgram_django"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cookiecutter = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
