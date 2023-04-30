@@ -42,7 +42,7 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres://localhost/wooksgram",
+        default="postgres://postgres:qkenr123@localhost:5432/wooksgram",
     ),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
