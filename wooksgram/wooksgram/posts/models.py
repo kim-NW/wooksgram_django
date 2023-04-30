@@ -1,5 +1,4 @@
 from django.db import models
-from wooksgram.users import models as user_model
 
 
 # Create your models here.
@@ -13,7 +12,7 @@ class TimeStameModel(models.Model):
 
 class Post(TimeStameModel):
     author = models.ForeignKey(
-        user_model,
+        "users.User",
         null=True,
         on_delete=models.CASCADE,
         related_name="post_author",
@@ -21,14 +20,14 @@ class Post(TimeStameModel):
     image = models.ImageField(blank=True)
     cpation = models.TextField(blank=True)
     image_likes = models.ManyToManyField(
-        user_model,
+        "users.User",
         related_name="post_likes",
     )
 
 
 class Comment(TimeStameModel):
     author = models.ForeignKey(
-        user_model,
+        "users.User",
         null=True,
         on_delete=models.CASCADE,
         related_name="comment_author",
